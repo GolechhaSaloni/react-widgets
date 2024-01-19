@@ -2,7 +2,7 @@ import cn from 'classnames'
 import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
 import { useUncontrolled } from 'uncontrollable'
-import Button from './Button'
+import IntuitButton from './Button'
 import { caretDown, caretUp } from './Icon'
 import { useLocalizer, Localizer } from './Localization'
 import NumberInput from './NumberInput'
@@ -440,7 +440,7 @@ function NumberPicker(uncontrolledProps: NumberPickerProps) {
           innerRef={inputRef}
         />
         <span className="rw-input-addon rw-number-picker-spinners">
-          <Button
+          <IntuitButton
             icon={incrementIcon}
             className="rw-picker-btn"
             disabled={clampedValue === max || disabled || readOnly}
@@ -453,7 +453,7 @@ function NumberPicker(uncontrolledProps: NumberPickerProps) {
             onMouseDown={(e) => handleMouseDown('UP', e)}
             onMouseLeave={() => handleMouseUp()}
           />
-          <Button
+          <IntuitButton
             icon={decrementIcon}
             className="rw-picker-btn"
             disabled={clampedValue === min || disabled || readOnly}

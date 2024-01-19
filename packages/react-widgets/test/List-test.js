@@ -1,6 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import List from '../src/List'
+import IntuitList from '../src/List'
 
 xdescribe('List', () => {
   var data = [
@@ -23,7 +23,7 @@ xdescribe('List', () => {
     let numItems = 5
 
     expect(
-      mount(<List data={data} onChange={() => {}} {...props} />).find(
+      mount(<IntuitList data={data} onChange={() => {}} {...props} />).find(
         '[role="option"]',
       ).length,
     ).to.equal(numItems)
@@ -33,7 +33,7 @@ xdescribe('List', () => {
     let selectSpy = sinon.spy()
 
     mount(
-      <List data={data} onSelect={selectSpy} onChange={() => {}} {...props} />,
+      <IntuitList data={data} onSelect={selectSpy} onChange={() => {}} {...props} />,
     )
       .find('[role="option"]')
       .first()
@@ -49,7 +49,7 @@ xdescribe('List', () => {
     let focusedItem = data[2]
 
     expect(
-      mount(<List {...props} activeId="foo" focusedItem={focusedItem} />)
+      mount(<IntuitList {...props} activeId="foo" focusedItem={focusedItem} />)
         .find('.rw-list-option')
         .at(2)
         .prop('id'),
@@ -58,7 +58,7 @@ xdescribe('List', () => {
 
   it('should respect textField and dataKeys', () => {
     expect(
-      mount(<List {...props} />)
+      mount(<IntuitList {...props} />)
         .find('[role="option"]')
         .first()
         .text(),
@@ -67,7 +67,7 @@ xdescribe('List', () => {
 
   it('should render an empty list message', () => {
     expect(
-      mount(<List {...props} data={[]} />)
+      mount(<IntuitList {...props} data={[]} />)
         .assertSingle('.rw-list-empty')
         .text(),
     ).to.equal('There are no items in this list')
@@ -77,7 +77,7 @@ xdescribe('List', () => {
     let renderItem = ({ item }) => <span>{'hello - ' + item.first}</span>
 
     expect(
-      mount(<List {...props} renderItem={renderItem} />)
+      mount(<IntuitList {...props} renderItem={renderItem} />)
         .find('[role="option"]')
         .first()
         .text(),
@@ -91,10 +91,10 @@ xdescribe('List', () => {
 
     expect(
       mount(
-        <List
+        <IntuitList
           {...props}
           data={data}
-          dataState={List.getDataState(data, { groupBy })}
+          dataState={IntuitList.getDataState(data, { groupBy })}
           renderGroup={renderGroup}
           groupBy={groupBy}
         />,

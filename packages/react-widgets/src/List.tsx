@@ -190,7 +190,7 @@ export function useHandleSelect<TDataItem>(
   }
 }
 
-const List: List = React.forwardRef(function List<TDataItem>(
+const IntuitList: List = React.forwardRef(function List<TDataItem>(
   {
     multiple = false,
     data = [],
@@ -294,7 +294,7 @@ const List: List = React.forwardRef(function List<TDataItem>(
   return renderList ? renderList(rootProps) : <div {...rootProps} />
 })
 
-List.displayName = 'List'
-List.propTypes = propTypes
+IntuitList.displayName = 'IntuitList'
+IntuitList.propTypes = propTypes
 
-export default List
+export default IntuitList

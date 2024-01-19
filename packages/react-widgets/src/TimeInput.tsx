@@ -3,7 +3,7 @@ import qsa from 'dom-helpers/querySelectorAll'
 import PropTypes from 'prop-types'
 import React, { useCallback, useRef, useState } from 'react'
 import { useUncontrolled } from 'uncontrollable'
-import Button from './Button'
+import IntuitButton from './Button'
 import DateTimePartInput from './DateTimePartInput'
 import { times } from './Icon'
 import Widget, { WidgetProps } from './Widget'
@@ -581,14 +581,14 @@ function TimeInput(uncontrolledProps: TimeInputProps) {
         </div>
       )}
       {!noClearButton && (
-        <Button
+        <IntuitButton
           label={'clear input'}
           onClick={handleClear}
           disabled={disabled || readOnly}
           className={classNames('rw-time-input-clear', showClear && 'rw-show')}
         >
           {times}
-        </Button>
+        </IntuitButton>
       )}
     </Widget>
   )

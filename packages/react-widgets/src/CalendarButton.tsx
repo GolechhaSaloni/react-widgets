@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import * as React from 'react'
 import { ReactNode } from 'react'
-import Button from './Button'
+import IntuitButton from './Button'
 
 export interface Props extends React.HTMLProps<HTMLButtonElement> {
   label?: string
@@ -13,7 +13,7 @@ export interface Props extends React.HTMLProps<HTMLButtonElement> {
 
 function CalendarButton({ className, ...props }: Props) {
   return (
-    <Button
+    <IntuitButton
       {...props}
       tabIndex={undefined}
       className={cn(className, 'rw-calendar-btn')}

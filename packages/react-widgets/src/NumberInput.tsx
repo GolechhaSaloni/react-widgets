@@ -3,7 +3,7 @@ import canUseDOM from 'dom-helpers/canUseDOM'
 import PropTypes from 'prop-types'
 import React, { FocusEvent, SyntheticEvent } from 'react'
 import { findDOMNode } from 'react-dom'
-import Input from './Input'
+import IntuitInput from './Input'
 import * as CustomPropTypes from './PropTypes'
 import { Localizer } from './Localization'
 
@@ -219,7 +219,7 @@ class NumberPickerInput extends React.Component<
     let value = this.state.stringValue
 
     return (
-      <Input
+      <IntuitInput
         {...props}
         ref={innerRef}
         inputMode="numeric"
