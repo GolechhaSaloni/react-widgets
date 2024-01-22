@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import Button, { Props as ButtonProps } from './Button'
+import IntuitButton, { Props as ButtonProps } from './Button'
 
 interface Props extends ButtonProps {
   className?: string
@@ -8,7 +8,7 @@ interface Props extends ButtonProps {
 }
 function InputAddon({ className, ...props }: Props) {
   return (
-    <Button
+    <IntuitButton
       {...props}
       className={cn(className, 'rw-input-addon rw-picker-btn')}
     />

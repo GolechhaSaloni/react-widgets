@@ -4,8 +4,8 @@ import * as React from 'react'
 import { useImperativeHandle, useMemo, useRef, useState } from 'react'
 import { useUncontrolledProp } from 'uncontrollable'
 import { caretDown } from './Icon'
-import Input from './Input'
-import List, { ListHandle } from './List'
+import IntuitInput from './Input'
+import IntuitList, { ListHandle } from './List'
 import { FocusListContext, useFocusList } from './FocusListContext'
 import BasePopup from './Popup'
 import InputAddon from './InputAddon'
@@ -195,7 +195,7 @@ const ComboboxImpl: Combobox = React.forwardRef(function Combobox<TDataItem>(
     renderListItem,
     renderListGroup,
     optionComponent,
-    listComponent: ListComponent = List,
+    listComponent: ListComponent = IntuitList,
     popupComponent: Popup = BasePopup,
     data: rawData = [],
     messages: userMessages,
@@ -452,7 +452,7 @@ const ComboboxImpl: Combobox = React.forwardRef(function Combobox<TDataItem>(
           hideCaret && !busy && 'rw-hide-caret',
         )}
       >
-        <Input
+        <IntuitInput
           {...inputProps}
           role="combobox"
           name={name}

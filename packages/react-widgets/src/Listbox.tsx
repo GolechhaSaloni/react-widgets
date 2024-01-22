@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cn from 'classnames'
 import React, { useMemo, useRef } from 'react'
 import { useUncontrolledProp } from 'uncontrollable'
-import List, { GroupBy, useHandleSelect } from './List'
+import IntuitList, { GroupBy, useHandleSelect } from './List'
 import { useFocusList, FocusListContext } from './FocusListContext'
 import { DataItem, RenderProp, Value } from './types'
 import * as CustomPropTypes from './PropTypes'
@@ -235,7 +235,7 @@ const Listbox: Listbox = React.forwardRef(function Listbox<TDataItem>(
 
   return (
     <FocusListContext.Provider value={list.context}>
-      <List
+      <IntuitList
         {...props}
         {...widgetProps}
         disabled={disabled}

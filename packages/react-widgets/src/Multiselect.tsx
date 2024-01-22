@@ -11,7 +11,7 @@ import React, {
 import { useUncontrolledProp } from 'uncontrollable'
 import AddToListOption, { CREATE_OPTION } from './AddToListOption'
 import { times } from './Icon'
-import List, { ListHandle } from './List'
+import IntuitList, { ListHandle } from './List'
 import { FocusListContext, useFocusList } from './FocusListContext'
 import MultiselectInput from './MultiselectInput'
 import MultiselectTagList, {
@@ -288,7 +288,7 @@ const Multiselect: Multiselect = React.forwardRef(function Multiselect<
     optionComponent,
     tagOptionComponent,
     groupBy,
-    listComponent: ListComponent = List,
+    listComponent: ListComponent = IntuitList,
     popupComponent: Popup = BasePopup,
     tagListComponent: TagList = MultiselectTagList,
     data: rawData = [],

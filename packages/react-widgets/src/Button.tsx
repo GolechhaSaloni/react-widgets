@@ -11,7 +11,7 @@ export interface Props extends React.HTMLProps<HTMLButtonElement> {
   children?: ReactNode
 }
 
-function Button({
+function IntuitButton({
   className,
   disabled,
   label,
@@ -38,4 +38,4 @@ function Button({
   )
 }
 
-export default Button
+export default IntuitButton

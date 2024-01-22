@@ -2,11 +2,11 @@ import cn from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export interface InputProps extends React.AllHTMLAttributes<HTMLInputElement> {
+export interface IntuitInputProps extends React.AllHTMLAttributes<HTMLInputElement> {
   component?: React.ElementType
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const IntuitInput = React.forwardRef<HTMLInputElement, InputProps>(
   (
     {
       className,
@@ -36,8 +36,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ),
 )
 
-Input.displayName = 'Input'
-Input.propTypes = {
+IntuitInput.displayName = 'Input'
+IntuitInput.propTypes = {
   disabled: PropTypes.bool,
   readOnly: PropTypes.bool,
   value: PropTypes.string,
@@ -46,4 +46,4 @@ Input.propTypes = {
   component: PropTypes.any,
 }
 
-export default Input
+export default IntuitInput

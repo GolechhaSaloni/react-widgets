@@ -1,10 +1,10 @@
 import React, { useMemo, useRef, useState } from 'react'
 import { isNullOrInvalid } from './dates'
-import Input, { InputProps } from './Input'
+import IntuitInput, { IntuitInputProps } from './Input'
 import { Localizer, RequiredDateMethods } from './Localization'
 
 export interface DatePickerInputProps<TDateFormat = unknown>
-  extends Omit<InputProps, 'value' | 'onChange'> {
+  extends Omit<IntuitInputProps, 'value' | 'onChange'> {
   formatter: RequiredDateMethods
   editing: boolean
   editFormat?: TDateFormat
@@ -82,7 +82,7 @@ const DatePickerInput = React.forwardRef(
     }
 
     return (
-      <Input
+      <IntuitInput
         {...props}
         type="text"
         ref={ref}

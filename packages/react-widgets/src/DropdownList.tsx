@@ -9,7 +9,7 @@ import DropdownListInput, {
   RenderValueProp,
 } from './DropdownListInput'
 import { caretDown } from './Icon'
-import List, { ListHandle } from './List'
+import IntuitList, { ListHandle } from './List'
 import { FocusListContext, useFocusList } from './FocusListContext'
 import BasePopup from './Popup'
 import Widget from './Widget'
@@ -218,7 +218,7 @@ const DropdownListImpl: DropdownList = React.forwardRef(function DropdownList<
     groupBy,
     onBlur,
     onFocus,
-    listComponent: ListComponent = List,
+    listComponent: ListComponent = IntuitList,
     popupComponent: Popup = BasePopup,
     data: rawData = [],
     messages: userMessages,
